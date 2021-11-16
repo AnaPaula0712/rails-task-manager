@@ -1,0 +1,8 @@
+<div class="container">
+  <h1 class="text-danger">Tasks</h1>
+  <button type="button" class="btn btn-outline-success" id="task"><%= link_to 'Add a task', new_task_path %></button>
+
+  <% @tasks.each do |task| %>
+    <div class="alert alert-primary" role="alert" id="task"><%= link_to task.title, task_path(task) %></div>
+  <% end %>
+</div>
